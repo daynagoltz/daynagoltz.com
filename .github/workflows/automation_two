@@ -1,0 +1,15 @@
+name: automation_two
+
+on: push
+
+jobs:
+  automation_two:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger GitHub pages workflow
+        run: |
+          curl --fail --request POST \
+            --url https://api.github.com/daynagoltz/daynagoltz.com/pages/builds \
+            
+        env:
+          USER_TOKEN: ${{ secrets.USER_TOKEN }}
