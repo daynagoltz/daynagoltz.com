@@ -1,4 +1,4 @@
-name: Deploy to GH Pages
+name: automation_baby
 
 on: push
 
